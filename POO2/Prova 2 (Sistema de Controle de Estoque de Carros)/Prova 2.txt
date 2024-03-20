@@ -1,0 +1,55 @@
+Você foi contratado para desenvolver um sistema de gerenciamento de uma loja de revenda de carros. Sua tarefa é criar uma modelagem UML do sistema, considerando as operações básicas de CRUD (Create, Read, Update e Delete) para os carros disponíveis na loja, e implementar a interface gráfica utilizando a biblioteca Tkinter.
+
+**Requisitos:**
+
+1. Cada carro possui as seguintes informações:
+
+- Marca
+
+- Modelo
+
+- Ano de fabricação
+
+- Preço
+
+- Estado (novo/usado)
+
+2. O sistema deve permitir as seguintes operações:
+
+- Adicionar um novo carro à lista de estoque da loja.
+
+- Listar todos os carros disponíveis na loja.
+
+- Buscar carros por marca, exibindo os resultados.
+
+- Atualizar as informações de um carro existente.
+
+- Remover um carro do estoque da loja.
+
+- Calcular a média de preço dos carros disponíveis na loja.
+
+3. O sistema deve ser implementado utilizando a biblioteca Tkinter para a criação da interface gráfica.
+
+4. Os dados dos carros devem ser armazenados em memória, não sendo necessário o uso de um banco de dados ou arquivo externo.
+
+**Tarefas:**
+
+Faça a modelagem UML para o sistema de gerenciamento da loja de revenda de carros, considerando as classes, atributos e métodos necessários para implementar os requisitos acima. (1,5 pontos)
+
+Explique brevemente a responsabilidade de cada classe e os relacionamentos entre elas na modelagem UML. (0,5 pontos)
+
+Implemente a interface gráfica utilizando a biblioteca Tkinter, seguindo a modelagem UML criada. A interface deve conter os elementos necessários para realizar as operações de CRUD. (3,5 pontos)
+
+Desenvolva o código em Python orientado a objetos que demonstre a utilização da sua implementação, realizando pelo menos três operações diferentes no sistema (por exemplo, adicionar um carro, buscar carros por marca e atualizar informações de um carro). (3,5 pontos)
+
+Os dados deverão ser armazenados em arquivos (1,0 pontos)
+
+**Observações:**
+
+- A prova será avaliada levando em consideração a corretude da modelagem UML, a adequação dos relacionamentos entre as classes, a correta implementação da interface gráfica utilizando Tkinter e a funcionalidade correta das operações de CRUD.
+
+- Utilize as boas práticas de programação orientada a objetos e de desenvolvimento de interfaces gráficas.
+
+- Você pode utilizar os elementos disponíveis no Tkinter, como janelas, botões, campos de entrada, listas, entre outros, de acordo com a sua modelagem UML.
+
+- Lembre-se de seguir as convenções de nomenclatura em Python e de fornecer comentários adequados para facilitar a compreensão do seu código.

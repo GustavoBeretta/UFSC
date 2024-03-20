@@ -1,0 +1,17 @@
+Você deve implementar um sistema de Locação de Automóveis, a locadora deverá ter armazenar (em listas) as informações de clientes, veículos e funcionários, assim como reservas e locações dos automóveis.
+
+- Modelagem UML das classes (neste quesito será avaliada a coerência da modelagem e da implementação. Por exemplo, se uma classe tiver um determinado atributo ou método este deverá aparecer tanto no UML quanto no código); 2,0
+
+- Utilização de Herança, composição e agregação ; 3,0
+
+- Criação, Edição, consulta , remoção das informações  e login; 3,0
+
+- Armazenamento de dados em memória principal(utilização de listas). 2,0
+
+- Apresentação de um manual de como deve ser inicializado o sistema (bibiotecas necessárias, sistema necessário etc) - 1,0
+
+dos:
+
+- Documentação do código via comentários no  1,0
+
+Sistemas que forem detectadas cópias ou plágios terão nota zero atribuída.
