@@ -1,0 +1,22 @@
+Enunciado:
+
+Escreva uma função para, dado o texto de um trecho de programa de entrada (na forma de string), verifique se todos os abre chave ('{') e fecha chave ('}') estão corretamente aninhados.
+
+Protótipo da função:
+
+bool verificaChaves(std::string trecho_programa);
+Exemplo de execução:
+
+int main() {
+    std::string trecho_programa = "int main() {\n    std::string trecho_programa = \"{UFSC}\";\n    bool ok = verificaChaves(trecho_programa);\n    if (ok) {\n        std::cout << \"Tudo certo\" << std::endl;\n    } else {\n        std::cout << \"Há problema\" << std::endl;\n    }\n    return 0;\n}\n";
+    bool ok = verificaChaves(trecho_programa);
+    if (ok) {
+        std::cout << "Tudo certo" << std::endl;
+    } else {
+        std::cout << "Há problema" << std::endl;
+    }
+    return 0;
+}
+Saída:
+
+Tudo certo

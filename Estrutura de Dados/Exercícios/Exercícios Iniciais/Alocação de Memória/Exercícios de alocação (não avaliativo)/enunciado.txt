@@ -1,0 +1,25 @@
+(1) cria um vetor de Alunos a partir de nomes e matriculas:
+Aluno *turma(string nomes[], int matriculas[], int N);
+
+Exemplo:
+
+vetor de nomes: ['Fulano', 'Beltrano', 'Cicrano']
+vetor de matriculas: [1010, 2020, 3030]
+vetor t alocado de saída: [{'Fulano',1010}, {'Beltrano',2020}, {'Cicrano':3030}]
+(2) cria um novo vetor contendo outros dois vetores de Alunos (acrescenta vetor 2 após o vetor 1):
+Aluno *turmas_uniao(Aluno t1[], Aluno t2[], int N1, int N2);
+
+Exemplo:
+
+t1 de entrada: [{'Fulano',1010}, {'Beltrano',2020}];  N1 = 2
+t2 de entrada: [{'Fulana',7070}, {'Beltrana',8080}, {'Cicrana',9090}];  N2 = 3
+tu de saída: [{'Fulano',1010}, {'Beltrano',2020}, {'Fulana',7070}, {'Beltrana',8080}, {'Cicrana':9090}]
+(3) divide uma turma t existente em duas outras (os conteúdos dos ponteiros pt1 e pt2 serão as duas saídas; inicialmente são iguais a 'nullptr'), a primeira com k elementos e a segunda com o restante (N-k elementos):
+void turmas_divisao(Aluno t[], int k, int N, Aluno **pt1, Aluno **pt2);
+
+Exemplo:
+
+t de entrada: [{'Fulano',1010}, {'Beltrano',2020}, {'Fulana',7070}, {'Beltrana',8080}, {'Cicrana':9090}]
+k = 2
+conteudo de pt1: [{'Fulano',1010}, {'Beltrano',2020}]
+conteudo de pt2: [{'Fulana',7070}, {'Beltrana',8080}, {'Cicrana',9090}]

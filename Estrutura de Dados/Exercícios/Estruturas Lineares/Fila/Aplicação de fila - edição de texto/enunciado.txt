@@ -1,0 +1,18 @@
+Enunciado:
+
+Escreva uma função para, dado um texto de entrada (na forma de string), adicione a uma fila caracter por caracter, exceto se for um '<' ou '>'.
+
+Ao ler o caracter '<' na entrada, a ação é a de remover um elemento (caracter) da fila.
+Em sendo o caracter '>', a ação é a de reinserir o último elemento (caracter) da fila.
+O retorno da função é a fila resultante, contendo o texto editado.
+
+Protótipo da função:
+
+structures::ArrayQueue<char> editaTexto(std::string texto);
+Exemplo de execução:
+
+std::string texto = "2022< Universidade <<Federal ->> Santa<< Catarina";
+structures::ArrayQueue<char> fila = editaTexto(texto);
+Saída:
+
+Universidade Federal --- Santa Catarina

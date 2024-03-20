@@ -1,0 +1,46 @@
+(1) o cálculo do maior valor:
+int maximo(int vet[], int N);
+
+Exemplo:
+
+vetor de entrada: [10, 50, 30, 70, 20]
+
+valor de saída: 70
+
+(2) a posição (ou índice) da primeira ocorrência do maior valor:
+int posicao(int vet[], int N);
+
+Exemplo:
+
+vetor de entrada: [10, 50, 30, 70, 20]
+
+posição de saída: 3
+
+(3) a criação de uma estrutura, denominada maxpos, contendo o valor do maior valor e a posição de sua primeira ocorrência:
+maxpos maximo_posicao(int vet[], int N);
+
+Exemplo:
+
+vetor de estrada: [10, 50, 30, 70, 20]
+
+estrutura de saída: { 70, 3 }
+
+(4) o cálculo de máximo ponto-a-ponto entre dois vetores vet1 e vet2 de mesmo tamanho N; a resposta consiste em atualização dos valores próprio vet1:
+void maximo_vetores(int vet1[], int vet2[], int N);
+
+Exemplo:
+
+vetor 1 original de entrada: [10, 50, 30, 70, 20]
+
+vetor 2 original de entrada: [30, 40, 20, 70, 10]
+
+vetor 1 após o processamento: [30, 50, 30, 70, 20]}
+
+(5) a construção de uma inversão do vetor, ou seja, o primeiro passa a ser o último, o segundo passa a ser o penúltimo, e assim por diante:
+void inversao(int vet[], int N);
+
+Exemplo:
+
+vetor original: [A, B, C, D, E]
+
+vetor após a chamada do método: [E, D, C, B, A]
