@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript Parte 1</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script src="./js/exercicio1.js"></script>
+    <script src="./js/exercicio2.js"></script>
+
+    <script src="./js/exercicio4.js"></script>
+    <script src="./js/exercicio5.js"></script>
+    <script src="./js/exercicio6.js"></script>
+    <script src="./js/exercicio7.js" defer></script>
+    <script src="./js/exercicio8.js" defer></script>
+    <script src="./js/exercicio9.js"></script>
+</head>
+<body>
+
+    <h1>Lista de exercícios sobre Javascript</h1>
+
+    <p>
+        Resolva cada um dos exercícios abaixo. Observe que alguns scripts já estão disponíveis na pasta <code>./js/</code>.
+    </p>
+
+    <h2>Exercício 1</h2>
+    <p>
+        Edite a função <code>tratadorDeCliqueExercicio1()</code> no arquivo <code>./js/exercicio1.js</code> para que a string recebida como entrada seja convertida para inteiro (<code>number</code>). Observe o resultado exibido no console (use F12 no navegador para verificar).
+    </p>
+    <p>
+        <input type="button" onclick="tratadorDeCliqueExercicio1()" 
+        value="Clique aqui">
+    </p>
+
+    <h2>Exercício 2</h2>
+
+    <p>
+        Edite a função <code>tratadorDeCliqueExercicio2()</code> utilizada no evento <code>onclick</code> do botão abaixo para exibir um alerta com a hora atual no seguinte formato: <br>
+        Horário: 8 PM : 40m : 28s
+    </p>
+    <p>
+        <input type="button" onclick="tratadorDeCliqueExercicio2()" 
+        value="Clique para exibir o horário atual">
+    </p>
+
+    <h2>Exercício 3</h2>
+    <p>
+       Crie um script que receba uma string como entrada (usando <code>prompt</code>) e apresente em um alerta (<code>alert</code>) a string sem o primeiro e o último caractere. A string deve ser informada por meio de uma janela prompt que deve aparecer quando o botão abaixo é clicado. O script deve ser criado como um arquivo chamado <code>./js/exercicio3.js</code>. 
+    </p>
+    <p>
+        <strong>Atenção:</strong> 
+        <ul>
+            <li>Não esqueça de carregar o script neste HTML.</li>
+            <li>Não esqueça de chamar a função criada no evento <code>onclick</code> do botão abaixo.</li>
+        </ul>
+        
+    </p>
+    <p>
+        <input type="button" value="Clique aqui para informar a string">
+    </p>
+
+    <h2>Exercicio 4</h2>
+    
+
+    <p>
+        Crie um script no arquivo <code>./js/exercicio4.js</code> capaz de verificar se dois números estão no intervalo 30..50 ou no intervalo 60..100 inclusive. 
+    </p>
+    <p>
+        Se o número estiver em <strong>algum</strong> dos intervalos, é necessário indicar o número e em qual intervalo ele se encontra. 
+        Se o número não estiver em nenhum dos intervalos, é necesário dizer que não está em nenhum dos intervalos. 
+        Os valores devem ser informados por meio de janelas <code>prompt</code> ao se clicar no botão abaixo e a saída deve ser apresentada no <code>console</code>.
+    </p>
+    <p> 
+        <strong>Exemplos:</strong>
+        <ol>
+            <li>
+                <ul>
+                    <li><b>Número informado</b>: 5</li>
+                    <li><b>Resposta no console</b>: O número informado não está em nenhum dos dois intervalos.</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><b>Número informado</b>: 35</li>
+                    <li><b>Resposta no console</b>: 35 está no intervalo [30,50].</li>
+                </ul>
+            </li>
+        </ol>
+    </p>
+    <p>
+        <input type="button" value="Clique aqui para informar valores">
+    </p>
+
+    <h2>Exercício 5</h2>
+    <p>
+        Edite a função <code>convertCelciusToFahrenheit</code> no arquivo <code>./js/exercicio5.js</code> para que receba um valor de temperatura em Celsius e mostre a
+        temperatura em Fahrenheit.
+    </p>
+    <p>A resposta da sua conversão deve ser informada como retorno (<code>return</code>) da função <code>convertCelciusToFahrenheit</code>. Não se preocupe, por enquanto, em como o resultado será exibido na página.</p>
+    <input type="text" value="30" id="celciusText"> ºC
+    <input type="button" value="Converter para Fahrenheit" id="converter" onClick="conversaoCtoF()"> 
+    <p id="resultFahrenheit"> Resultado da conversão </p>
+
+    
+    
+    <h2>Exercício 6</h2>
+
+    <p>
+        Crie um script que receba uma string (através de um prompt) como entrada e mostre a string invertida no console. Coloque seu script no arquivo <code>./js/exercicio6.js</code>. Note que será necessário atualizar o evento <code>onclick</code> do botão abaixo.
+    </p>
+    <p>
+        <input type="button" value="Clique aqui para inverter uma string">
+    </p>
+    
+    <h2>Exercicio 7</h2>
+
+    <p>
+        O número 99 possui a seguinte característica:
+    </p>
+
+    <table>
+        <tr><th>99</th></tr>
+        <tr><td>99<sup>2</sup> = 9801</td></tr>
+        <tr><td>98 + 01 = 99</td></tr>
+    </table>
+
+
+
+<p>
+    Atualize a função <code>listarCasos()</code> no arquivo <code>./js/exercicio7.js</code> para que ela retorne uma lista 
+    de todos os números de dois algarismos que possuem essa mesma característica, sendo que o número ao quadrado gere um número com quatro algarismos (por ex: 9801 tem quatro algarismos). 
+    <aside>
+        Edite apenas a função <code>listarCasos()</code>. Se a lista retornada não for vazia (e sabemos que não é vazia pois contém ao menos o valor 99), o resultado será exibido em formato de tabela. Isso é feito no próprio script <code>./js/exercicio7.js</code>.
+    </aside>
+</p>
+<p>
+    <input type="button" onclick="tratadorDeCliqueExercicio7()" 
+    value="Clique para apresentar os números com esta mesma característica">
+</p>
+
+<div id="areaParaResultados"></div>
+
+<h2>Exercício 8</h2>
+
+
+<p>
+    O número de inscrição no CPF é composto de onze dígitos decimais, sendo os oito
+    primeiros aleatoriamente designados no momento da inscrição. Já o nono
+    (antepenúltimo) dígito indica a região fiscal responsável pela inscrição. Existem 10
+    regiões distintas, mas no caso da 10ª Região Fiscal, o algarismo zero é utilizado como
+    nono dígito. As regiões fiscais são:
+</p>
+<ol>
+    <li>DF, GO, MT, MS e TO;</li>
+    <li>AC, AP, AM, PA, RO e RR;</li>
+    <li>CE, MA e PI;</li>
+    <li>AL, PB, PE e RN;</li>
+    <li>BA e SE;</li>
+    <li>MG;</li>
+    <li>ES e RJ;</li>
+    <li>SP;</li>
+    <li>PR e SC;</li>
+    <li>RS.</li>
+</ol>
+
+<p>Crie um script que determine qual a região fiscal a partir de um CPF não formatado (um número qualquer com 11 dígitos).</p>
+<input type="text" value="00000000900" id="textCPF">
+<input type="button" value="Obter região fiscal" onClick="tratadorDeCliqueExercicio8()"> 
+<p id="regiaoFiscal"> Região fiscal: </p>
+
+<h2>Exercício 9</h2>
+
+<p>
+    Implemente a validação do CPF digidato na caixa de texto acima. Há alguns itens a serem considerados na validação, vamos tratá-los um por um. As validações são cumulativas, assim, a segunda validação só funcionará se a primeira estiver funcionando. A terceira só funcionará se as duas primeiras estiverem funcionando e assim sucessivamente. 
+</p>
+    
+
+<aside>
+    Verifique após a lista das validações mais detalhes de como a validação por dígito verificador é feita para o CPF.
+</aside>
+
+<ol type="a">
+    <li>Valide o valor para garantir que há 11 dígitos <br> 
+        <input type="button" value="Testar" name="onzeDigitos" onclick="tratadorDeCliqueExercicio9(this.name)">
+        <div id="onzeDigitos" class="divValidadeNaoTestada">Valido?</div>
+    </li>
+    <li>Valide os 11 dígitos para garantir que todos são números <br> 
+        <input type="button" value="Testar" name="onzeSaoNumeros" onclick="tratadorDeCliqueExercicio9(this.name)">
+        <div id="onzeSaoNumeros" class="divValidadeNaoTestada">Valido?</div>
+    </li>
+    <li>Valide os 11 dígitos para garantir que não são todos iguais <br> 
+        <input type="button" value="Testar" name="naoSaoTodosIguais" onclick="tratadorDeCliqueExercicio9(this.name)">
+        <div id="naoSaoTodosIguais" class="divValidadeNaoTestada">Valido?</div>
+    </li>
+    <li>Valide o primeiro dígito verificador (10º dígito do CPF) <br> 
+        <input type="button" value="Testar" name="verificador10" onclick="tratadorDeCliqueExercicio9(this.name)">
+        <div id="verificador10" class="divValidadeNaoTestada">Valido?</div>
+    </li>
+    <li>Valide o segundo digito verificador (11º dígito do CPF) <br> 
+        <input type="button" value="Testar" name="verificador11" onclick="tratadorDeCliqueExercicio9(this.name)">
+        <div id="verificador11" class="divValidadeNaoTestada">Valido?</div>
+    </li>
+</ol>
+
+<h4>Os dígitos verificadores</h4>
+
+<p>A validação do CPF através dos dígitos verificadores (10º e 11º dígitos) é feita da seguinte maneira:</p>
+
+<ol>
+    <li>O primeiro dígito verificador é calculado a partir dos 9 dígitos anteriores. 
+        Cada um dos 9 dígitos iniciais do CPF, da esquerda para a direita é multiplicado por números
+        decrescentes, de 10 até 2. 
+        Faz-se então a soma dessas multiplicações. 
+        Para um CPF <code>abc.def.ghi-jk</code> (onde cada letra representa um dígito), a soma é <code>soma=10*a+9*b+8*c+7*d+6*e+5*f+4*g+3*h+2*i</code>. Essa soma é então multiplicada por 10, para então obter-se o resto da divisão por 11. 
+        Em outras palavras, <code>resto=(soma*10)%11</code>. 
+        Se o resto for 10, utiliza-se 0 em seu lugar. 
+        Para que o primeiro dígito verificador seja válido, ele deve ser igual ao resto encontrado. 
+        No exemplo, para que o CPF seja válido, o valor <code>j</code> deve ser igual ao valor <code>resto</code>.</li>
+    <li>O segundo dígito verificador é calculado de maneira similar, mas a partir dos 10 dígitos anteriores (logo, inclui o primeiro dígito verificador). 
+        Cada um dos 10 dígitos iniciais do CPF, da esquerda para a direita é multiplicado por números
+        decrescentes, de 11 até 2. 
+        Faz-se então a soma dessas multiplicações. 
+        Para um CPF <code>abc.def.ghi-jk</code> (onde cada letra representa um dígito), a soma é <code>soma=11*a+10*b+9*c+8*d+7*e+6*f+5*g+4*h+3*i+2*j</code>. 
+        Assim como no caso do primeiro dígito verificador, essa soma é então multiplicada por 10, para então obter-se o resto da divisão por 11. 
+        Ou seja, <code>resto=(soma*10)%11</code>. 
+        Se o resto for 10, utiliza-se 0 em seu lugar. 
+        Para que o segundo dígito seja válido, ele deve ser igual ao resto encontrado. 
+        No exemplo, para que o CPF seja válido, o valor de <code>k</code> deve ser igual ao valor <code>resto</code>. 
+        Note que o resto nesse caso é encontrado a partir de uma soma diferente do que no caso do primeiro dígito.</li>
+</ol>
+
+<p>Percebam que a validação dos dois dígitos verificadores é bastante similar. Vocês podem aproveitar as similaridades para escrever o código de validação.</p>
+
+<p>O botão abaixo cria um alerta que apresenta se o CPF é valido, considerando a validação implementada acima.</p>
+<p>
+    <input type="button" value="Testar a validade do CPF" name="validade" onclick="tratadorDeCliqueExercicio9(this.name)">
+</p>
+
+</body>
+</html>

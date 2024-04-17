@@ -1,0 +1,37 @@
+code {
+    font-family: Consolas,"courier new";
+    color: crimson;
+    padding: 2px;
+    font-size: 95%;
+}
+th, td {
+    text-align: center; 
+}
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+th:nth-last-child(1), td:nth-last-child(1) {
+    border-right: 0;
+}
+.divValidadeNaoTestada {
+    display: inline-block;
+}
+.divValidadeValido {
+    display: inline-block;
+    background-color: green;
+    text-transform: capitalize;
+}
+.divValidadeInvalido {
+    display: inline-block;
+    background-color: red;
+    text-transform: capitalize;
+}
+aside {
+    width: 80%;
+    padding-left: 15px;
+    margin-left: 15px;
+    font-style: italic;
+    background-color: lightgray;
+}
