@@ -1,9 +1,6 @@
 function obterRegiaoFiscalAtravesDoCPFInformado(cpfInformado) {
-    //edite esta função!
-    let regiaoFiscal = undefined
-    console.log(cpfInformado)
-    
-    //----------------------------
+    let list = cpfInformado.split("")
+    let regiaoFiscal = list[8]
     return regiaoFiscal
 }
 

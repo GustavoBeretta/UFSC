@@ -1,10 +1,17 @@
 function listarCasos() {
     let todosOsCasos = []
-    //--- inclua seu algoritmo aqui ---
-
-    
-
-    //--- ---
+    for (let i = 10; i < 100; i++) {
+        let quadrado = i**2
+        if (quadrado < 10000 && quadrado > 999) {
+            quadrado = String(quadrado)
+            quadrado = quadrado.split("")
+            let n1 = Number(quadrado[0] + quadrado[1])
+            let n2 = Number(quadrado[2] + quadrado[3])
+            if (n1 + n2 == i) {
+                todosOsCasos.push(i)
+            }
+        }
+    }
     return todosOsCasos
 }
 

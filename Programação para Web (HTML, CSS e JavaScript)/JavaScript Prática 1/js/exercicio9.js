@@ -1,15 +1,25 @@
 function haOnzeDigitos(cpf) {
-    //---- edite aqui para a validação do exercício 9a
-    return false
+    let n = cpf.length
+    return n == 11
 }
 
 function todosOsOnzeDigitosSaoNumeros(cpf) {
-    //---- edite aqui para a validação do exercício 9b
-    return false
+    let list = cpf.split("")
+    for (i = 0; i < cpf.length; i++) {
+        if (isNaN(list[i])) {
+            return false
+        }
+    }
+    return true
 }
 
 function osOnzeNumerosSaoDiferentes(cpf) {
-    //---- edite aqui para a validação do exercício 9c
+    let list = cpf.split("")
+    for (i = 1; i < cpf.length; i++) {
+        if (list[i] != list[i--]){
+            return true
+        }
+    }
     return false
 }
 
