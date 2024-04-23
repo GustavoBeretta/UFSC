@@ -16,7 +16,7 @@ function todosOsOnzeDigitosSaoNumeros(cpf) {
 function osOnzeNumerosSaoDiferentes(cpf) {
     let list = cpf.split("")
     for (i = 1; i < cpf.length; i++) {
-        if (list[i] != list[i--]){
+        if (list[i] != list[i-1]){
             return true
         }
     }
@@ -24,12 +24,38 @@ function osOnzeNumerosSaoDiferentes(cpf) {
 }
 
 function oPrimeiroDigitoVerificadorEhValido(cpf) {
-    //---- edite aqui para a validação do exercício 9d
+    let list = cpf.split("")
+    let soma = 0
+    let n = 10
+    for (let i = 0; i < 9; i++) {
+        soma += Number(list[i])*n
+        n -= 1
+    }
+    let resto = (soma * 10) % 11
+    if (resto == 10) {
+        resto = 0
+    }
+    if (resto == list[9]) {
+        return true
+    }
     return false
 }
 
 function oSegundoDigitoVerificadorEhValido(cpf) {
-    //---- edite aqui para a validação do exercício 9e
+    let list = cpf.split("")
+    let soma = 0
+    let n = 11
+    for (let i = 0; i < 10; i++) {
+        soma += Number(list[i])*n
+        n -= 1
+    }
+    let resto = (soma * 10) % 11
+    if (resto == 10) {
+        resto = 0
+    }
+    if (resto == list[10]) {
+        return true
+    }
     return false
 }
 
