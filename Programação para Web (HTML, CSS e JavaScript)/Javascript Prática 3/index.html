@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Material Icon CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/password_visibility.js" defer></script>
+    <title>Prática JavaScript</title>
+</head>
+<body>
+
+    <nav>
+          <div>
+            <button class="dropbtn" onclick="mostrarApenasHome()">
+              <i class="menuIcon material-icons">home</i>
+          </button>
+           
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn" onclick="mostrarMenu('acountDropdown')">
+                <i class="menuIcon material-icons">account_circle</i>
+            </button>
+    
+            <div id="acountDropdown" class="dropdown-content">
+              <a href="#" onclick="mostrarApenasLogin()">Fazer login</a>
+              <hr>
+              <a href="#" onclick="mostrarApenasConta()">Criar conta</a>
+            </div>
+          </div>
+    </nav>
+
+
+    <main>
+        <div id="divHome">
+        <h1>Prática - JavaScript (parte 2)</h1>
+        
+        <p>
+          Este exercício simula uma página web dinâmica.
+        </p>
+
+        <p>
+          Você precisará trabalhar um pouco com cada um dos temas abordados até aqui: 
+          <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ol>
+        </p>
+        
+        <p>
+          Através deste exercício você vai trabalhar com validação de alguns formulários usando Javascript e também aprender um pouco mais sobre o 
+        HTML DOM, CSS e criação de classes e objetos em JavaScript.
+        </p>
+
+        <p>
+          Alguns códigos já estão escritos e outros você precisará implementar por completo.
+        </p>
+
+        <p>
+          Abaixo desta descrição, há dois elementos div com formulários para:
+          <ol>
+            <li>Login</li>
+            <li>Criação de nova conta (cadastro)</li>
+          </ol>
+        </p>
+
+        <p>
+          Primeiramente, você vai atualizar esta página para que os formulários (login e cadastro) só apareçam quando necessário. 
+          Nesses casos (quando da apresentação de um formulário), a presente descrição deve ficar oculta (mas poderá ser visível na home).
+        </p>
+
+        <h2>Ocultar elementos da página através do Javascript e propriedade display</h2>
+
+        <p>
+          Use o HTML DOM para ocultar os elementos desta página, mantendo inicialmente apenas esta descrição. Ou seja,
+          oculte as telas de login e de criação de nova conta <strong>ao inicializar</strong> a página. 
+          Utilize a propriedade <code>display: none</code> para ocultar os elementos relacionados aos formulários. 
+        </p>
+
+        <p>Note que na página há um botão de home na área superior esquerda. 
+        Inclua um tratador de cliques no botão home para que tenha o mesmo efeito da inicialização da página (ocultar as telas de login e de criação de conta).</p>
+
+        <p>Note agora que na página há um botão de usuário na área superior direita. Este botão abre um menu com duas opções:
+        
+        <ol>
+          <li>Fazer login</li>
+          <li>Criar conta</li>
+        </ol>
+        
+        Faça com que a página oculte a presente descrição e exiba a tela de login ou a tela de criação de conta, de acordo com a opção clicada no menu. </p>
+
+        <h2>Tela de login</h2>
+
+        <p>Na tela de login, faça com que o botão entrar apenas seja habilitado quando houver algum conteúdo tanto no campo de e-mail quanto no campo de senha.</p>
+
+        <p>Ao abrir essa tela, todos os campos devem ser resetados (limpar qualquer dado já preenchido anteriormente).</p>
+
+        <p>No campo e-mail deve haver um e apenas um caractere @ (como forma simples de validação de e-mail).</p>
+
+        <p>
+          Perceba que na área de senha há um botão com o desenho de um olho. 
+          Tal botão permite revelar a senha digitada enquanto se mantém o botão clicado. 
+          Altere o comportamento para que ele permita que a senha seja digitada sem estar oculta. 
+          Neste caso, o botão deve mudar seu ícone para indicar que um novo clique causará a ocultação da senha. 
+          No caso quando a senha não está oculta, ao sair da caixa de digitação da senha ela deve voltar a ser ocultada. 
+        </p>
+
+        <h2>Tela de criação de nova conta</h2>
+
+        <p>
+          Valide os campos durante a criação de nova conta. 
+          Apenas permita a criação de uma nova conta quando todos os campos estiverem validados. 
+          Ou seja, não permita que o botão criar conta seja clicado antes de validar todos os campos. 
+        </p>
+
+      
+        <p>
+          Os campos nome, sobrenome e e-mail não devem estar vazios. 
+          O campo e-mail deve conter uma e apenas uma @. 
+          Mostre, em vermelho, um status ao lado do campo para indicar possíveis problemas no preenchimento dos campos. 
+          O HTML já está preparado com um parágrafo de status para cada campo.
+        </p>
+
+        <p>
+          Use a sua implementação de validação de CPF criada na última aula para validar o campo de CPF. 
+          Crie uma classe CPF que recebe o valor de CPF no construtor e lance uma exceção no caso de CPF não ser válido. 
+          Inclua na mensagem da exceção qual o problema de validação do CPF. 
+          Trate os casos de exceção para mostrar no parágrafo de status do campo CPF qual é o problema na validação do CPF.
+        </p>
+
+        <p>
+          Nos campos relacionados à senha é necessário garantir que ambos os campos possuem o mesmo conteúdo (não vazio). 
+          Opcionalmente, inclua uma indicação da segurança da senha digitada.
+        </p>
+
+        <p>
+          Para cada campo, apresente no status um ícone verde indicando quando o campo foi validado com sucesso.
+        </p>
+
+        <p>
+          Ao abrir o formulário de criação de nova conta, todos os campos devem ser resetados (limpar qualquer dado já preenchido anteriormente) e qualquer mensagem de status.
+        </p>
+
+        <p>
+          Ao permitir a criação de uma nova conta, crie uma nova instância de um objeto representando a conta (crie uma classe para esse objeto). 
+          Ele deve ter em seu construtor os campos preenchidos e, no caso do CPF, deve receber o objeto CPF instanciado (que não vai lançar exceção).
+          Mostre o objeto criado no console.
+        </p>
+
+        </div>
+
+
+        <!-- 
+          Div com id login-body será a tela de login
+         -->
+
+        <div id="login-body">
+          <h1>Entrar</h1>
+          <form>
+              <label>E-mail:</label><input type="text">
+              <label>Senha:</label>
+              <div class="passwordSpy">
+                  <input id="login-password" type="password">
+                  <img id="olho" class="olho" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+                  onmousedown="mostrarSenha()" onmouseup="ocultarSenha()">
+              </div>
+              
+              <div id="manterConectado"><input type="checkbox"> Manter conectado</div>
+
+              
+              <button id="botaoLogin">Entrar<i class="menuIcon material-icons">login</i></button>
+          </form>
+      </div>
+
+      <!-- 
+          Div com id nova-conta será a tela de login
+         -->
+
+      <div id="nova-conta">
+        <h1><i class="menuIcon material-icons">account_box</i> Criar nova conta</h1>
+        <form>
+        
+          <label>Nome:</label>
+          <input type="text" onblur="validaTextoEmBranco(this, 'statusNome', 'Nome')">
+          <p id="statusNome"></p>
+          
+          
+          <label>Sobrenome:</label>
+          <input type="text" onblur="validaTextoEmBranco(this, 'statusSobrenome', 'Sobrenome')">
+          <p id="statusSobrenome"></p>
+          
+          
+          <label>CPF:</label>
+          <input type="text" onblur="validarCPF(this)">
+          <p id="statusCPF"></p>
+          
+          
+          <label>E-mail:</label>
+          <input type="text">
+          <p id="statusEmail"></p>
+          
+          
+          <label>Senha:</label>
+          <input type="password">
+          <p id="statusSenha"></p>
+          
+          
+          <label>Repita sua senha:</label>
+          <input type="password">
+          <p id="statusRepitaSenha"></p>
+          
+          <div id="areaBotaoConta">
+            <input type="button" value="Criar conta" style="min-width: 100px">
+          </div>
+          
+          
+      </form>
+      </div>
+
+    </main>
+
+    <footer>
+        © INE 5646 - Programação para a web
+    </footer>
+    
+</body>
+</html>
