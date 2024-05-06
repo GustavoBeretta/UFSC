@@ -160,21 +160,21 @@
           Div com id login-body será a tela de login
          -->
 
-        <div id="login-body">
+        <div id="login-body" style='display: none;'>
           <h1>Entrar</h1>
           <form>
-              <label>E-mail:</label><input type="text">
+              <label>E-mail:</label><input id="campo-email" type="text" oninput="camposPreenchidos()">
               <label>Senha:</label>
               <div class="passwordSpy">
-                  <input id="login-password" type="password">
-                  <img id="olho" class="olho" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
-                  onmousedown="mostrarSenha()" onmouseup="ocultarSenha()">
+                  <input id="login-password" type="password" oninput="checkInput()">
+                  <img id="olho" class="olho" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" type="password"
+                  onclick="visibilidadeSenha()" >
               </div>
               
               <div id="manterConectado"><input type="checkbox"> Manter conectado</div>
 
               
-              <button id="botaoLogin">Entrar<i class="menuIcon material-icons">login</i></button>
+              <button id="botaoLogin" style="display: none;">Entrar<i class="menuIcon material-icons">login</i></button>
           </form>
       </div>
 
@@ -182,41 +182,41 @@
           Div com id nova-conta será a tela de login
          -->
 
-      <div id="nova-conta">
+      <div id="nova-conta" style='display: none;'>
         <h1><i class="menuIcon material-icons">account_box</i> Criar nova conta</h1>
         <form>
         
           <label>Nome:</label>
-          <input type="text" onblur="validaTextoEmBranco(this, 'statusNome', 'Nome')">
+          <input id='nome' type="text" oninput="validaTexto(id, 'statusNome')">
           <p id="statusNome"></p>
           
           
           <label>Sobrenome:</label>
-          <input type="text" onblur="validaTextoEmBranco(this, 'statusSobrenome', 'Sobrenome')">
+          <input id="sobrenome" type="text" oninput="validaTexto(id, 'statusSobrenome')">
           <p id="statusSobrenome"></p>
           
           
           <label>CPF:</label>
-          <input type="text" onblur="validarCPF(this)">
+          <input id="cpf" type="text" onblur="validarCPF(this)">
           <p id="statusCPF"></p>
           
           
           <label>E-mail:</label>
-          <input type="text">
+          <input id='email' type="text" oninput="validaEmail()">
           <p id="statusEmail"></p>
           
           
           <label>Senha:</label>
-          <input type="password">
+          <input id="senha" type="password" oninput="validaTexto(id, 'statusSenha')">
           <p id="statusSenha"></p>
           
           
           <label>Repita sua senha:</label>
-          <input type="password">
+          <input id="senhaa" type="password" oninput="validaSenha()">
           <p id="statusRepitaSenha"></p>
           
           <div id="areaBotaoConta">
-            <input type="button" value="Criar conta" style="min-width: 100px">
+            <input type="button" value="Criar conta" style="min-width: 100px" disabled>
           </div>
           
           
