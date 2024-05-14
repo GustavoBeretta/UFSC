@@ -27,9 +27,9 @@ function mostrarApenasConta() {
 
 function camposPreenchidos() {
     if (document.getElementById('login-password').value && document.getElementById('campo-email').value.split('@').length == 2) {
-        document.getElementById('botaoLogin').style.display = 'block'
+        document.getElementById('botaoLogin').disabled = false
     } else {
-        document.getElementById('botaoLogin').style.display = 'none'
+        document.getElementById('botaoLogin').disabled = true
     }
 }
 

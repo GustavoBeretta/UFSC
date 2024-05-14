@@ -166,15 +166,15 @@
               <label>E-mail:</label><input id="campo-email" type="text" oninput="camposPreenchidos()">
               <label>Senha:</label>
               <div class="passwordSpy">
-                  <input id="login-password" type="password" oninput="checkInput()">
+                  <input id="login-password" type="password" oninput="camposPreenchidos()" onblur="ocultaSenha()">
                   <img id="olho" class="olho" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" type="password"
-                  onclick="visibilidadeSenha()" >
+                  onclick="visibilidadeSenha()">
               </div>
               
               <div id="manterConectado"><input type="checkbox"> Manter conectado</div>
 
               
-              <button id="botaoLogin" style="display: none;">Entrar<i class="menuIcon material-icons">login</i></button>
+              <button id="botaoLogin" disabled>Entrar<i class="menuIcon material-icons">login</i></button>
           </form>
       </div>
 

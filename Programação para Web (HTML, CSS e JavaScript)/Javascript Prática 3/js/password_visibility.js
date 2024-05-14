@@ -7,3 +7,8 @@ function visibilidadeSenha() {
         document.getElementById('olho').src = "https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
     }
 }
+
+function ocultaSenha() {
+    document.getElementById('login-password').type = 'password'
+    document.getElementById('olho').src = "https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+}
