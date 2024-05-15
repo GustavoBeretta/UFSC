@@ -187,36 +187,36 @@
         <form>
         
           <label>Nome:</label>
-          <input id='nome' type="text" oninput="validaTexto(id, 'statusNome')">
-          <p id="statusNome"></p>
+          <input id='nome' type="text" onblur="validaCriacao('statusNome')">
+          <p id="statusNome" class="status"></p>
           
           
           <label>Sobrenome:</label>
-          <input id="sobrenome" type="text" oninput="validaTexto(id, 'statusSobrenome')">
-          <p id="statusSobrenome"></p>
+          <input id="sobrenome" type="text" onblur="validaCriacao('statusSobrenome')">
+          <p id="statusSobrenome" class="status"></p>
           
           
           <label>CPF:</label>
-          <input id="cpf" type="text" onblur="validarCPF(this)">
-          <p id="statusCPF"></p>
+          <input id="cpf" type="text" onblur="validaCriacao('statusCPF')">
+          <p id="statusCPF" class="status"></p>
           
           
           <label>E-mail:</label>
-          <input id='email' type="text" oninput="validaEmail()">
-          <p id="statusEmail"></p>
+          <input id='email' type="text" onblur="validaCriacao('statusEmail')">
+          <p id="statusEmail" class="status"></p>
           
           
           <label>Senha:</label>
-          <input id="senha" type="password" oninput="validaTexto(id, 'statusSenha')">
-          <p id="statusSenha"></p>
+          <input id="senha" type="password" onblur="validaCriacao('statusSenha')">
+          <p id="statusSenha" class="status"></p>
           
           
           <label>Repita sua senha:</label>
-          <input id="senhaa" type="password" oninput="validaSenha()">
-          <p id="statusRepitaSenha"></p>
+          <input id="senhaa" type="password" onblur="validaCriacao('statusRepitaSenha')">
+          <p id="statusRepitaSenha" class="status"></p>
           
           <div id="areaBotaoConta">
-            <input type="button" value="Criar conta" style="min-width: 100px" disabled>
+            <input id="BotaoConta" type="button" value="Criar conta" style="min-width: 100px" disabled>
           </div>
           
           
