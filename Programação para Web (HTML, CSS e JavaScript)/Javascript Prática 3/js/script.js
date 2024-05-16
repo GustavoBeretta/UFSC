@@ -125,7 +125,7 @@ class CPF{
 
 function checaCPF(){
     try {
-        let cpf_object = new CPF(document.getElementById('cpf').value)
+        new CPF(document.getElementById('cpf').value)
         document.getElementById('statusCPF').innerText = '✅'
         return true
     } catch(erro) {
@@ -169,3 +169,29 @@ function validaCriacao(status_atual) {
     document.getElementById(status_atual).style.display = 'block'
 }
 
+function criaConta() {
+    let conta = new Conta(document.getElementById('nome').value, document.getElementById('sobrenome').value, new CPF(document.getElementById('cpf').value), document.getElementById('email').value, document.getElementById('senha').value)
+    console.log(conta)
+    document.getElementById('nome').value=''
+    document.getElementById('sobrenome').value=''
+    document.getElementById('cpf').value=''
+    document.getElementById('email').value=''
+    document.getElementById('senha').value=''
+    document.getElementById('senhaa').value=''
+    document.getElementById('statusNome').style.display = 'none'
+    document.getElementById('statusSobrenome').style.display = 'none'
+    document.getElementById('statusCPF').style.display = 'none'
+    document.getElementById('statusEmail').style.display = 'none'
+    document.getElementById('statusSenha').style.display = 'none'
+    document.getElementById('statusRepitaSenha').style.display = 'none'
+}
+
+class Conta{
+    constructor(nome, sobrenome, cpf, email, senha) {
+        this.nome = nome
+        this.sobrenome = sobrenome
+        this.cpf = cpf
+        this.email = email
+        this.senha = senha
+    }
+}
