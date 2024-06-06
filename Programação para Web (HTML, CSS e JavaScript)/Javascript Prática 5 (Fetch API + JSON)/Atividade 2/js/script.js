@@ -175,10 +175,14 @@ async function checaCEP() {
             document.getElementById('bairro').value = endereco.bairro
             document.getElementById('cidade').value = endereco.localidade
             document.getElementById('estado').value = endereco.uf
-            validaCriacao('statuslogradouro')
-            validaCriacao('statusbairro')
-            validaCriacao('statuscidade')
-            validaCriacao('statusestado')
+            document.getElementById('statuslogradouro').innerText = '✅'
+            document.getElementById('statusbairro').innerText = '✅'
+            document.getElementById('statuscidade').innerText = '✅'
+            document.getElementById('statusestado').innerText = '✅'
+            document.getElementById('statuslogradouro').style.display = 'block'
+            document.getElementById('statusbairro').style.display = 'block'
+            document.getElementById('statuscidade').style.display = 'block'
+            document.getElementById('statusestado').style.display = 'block'
             return true
         }
     }
