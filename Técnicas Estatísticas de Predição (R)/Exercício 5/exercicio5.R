@@ -1,0 +1,20 @@
+if (!require("forecast")) install.packages("forecast", dependencies=TRUE)
+library(forecast)
+library(zoo)
+ipca_data <- read.csv2("ipca.csv")
+ipca_data <- ts(ipca_data$IPCA, start = c(1994, 8), frequency = 12)
+
+#a)
+ses_model <- ses(ipca_data)
+summary(ses_model)
+autoplot(ses_model)
+
+#b)
+holt_model <- holt(ipca_data)
+summary(holt_model)
+autoplot(holt_model)
+
+#c)
+hw_model <- hw(ipca_data)
+summary(hw_model)
+autoplot(hw_model)
