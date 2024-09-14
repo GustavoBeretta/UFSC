@@ -1,0 +1,158 @@
+:root {
+    --cor0: #ceecf2;
+    --cor1: #05c7f2;
+    --cor2: #0487d9;
+    --cor3: #2165bf;
+    --cor4: #2639a6;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 80px;
+    background-color: var(--cor3);
+    text-align: center;
+}
+
+.navegacao {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navegacao:hover {
+    background-color: var(--cor0);
+}
+
+main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+    max-width: 1015px;
+}
+
+.tags {
+    background-color: var(--cor1);
+    width: 295px;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 1140px) {
+    
+    main {
+        max-width: 675px;
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+    
+    main {
+        max-width: 335px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    header {
+        height: 200px;
+        padding-top: 1px;
+        padding-bottom: 5px;
+    }
+
+    #flex-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navegacao {
+        width: 200px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+}
+
+footer {
+    background-color: var(--cor3);
+    padding: 20px;
+}
+
+address {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+address > h2 {
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.social-link {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.social-link:hover {
+    background-color: var(--cor0);
+}
+
+.social-link img {
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width: 976px) {
+
+    .margem-direita-botao {
+        margin-right: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 975px) {
+
+    address {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-link {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    #email {
+        margin-bottom: 15px;
+    }
+
+}
