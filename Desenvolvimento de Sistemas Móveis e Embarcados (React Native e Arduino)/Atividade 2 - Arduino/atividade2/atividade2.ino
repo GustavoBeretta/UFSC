@@ -15,7 +15,7 @@ void setup() {
 
 void loop() {
   int valorPot = analogRead(potPin);
-  int distanciaLimite = map(valorPot, 0, 1023, 0, 100);
+  int distanciaLimite = map(valorPot, 0, 1023, 0, 440);
 
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
@@ -31,7 +31,7 @@ void loop() {
 
   if (distancia <= distanciaLimite) {
     servoMotor.write(90);
-  } else {
+  } else if (distancia < 440) {
     servoMotor.write(0);
   }
 
