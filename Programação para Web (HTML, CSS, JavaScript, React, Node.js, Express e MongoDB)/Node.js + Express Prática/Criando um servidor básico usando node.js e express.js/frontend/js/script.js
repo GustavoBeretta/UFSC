@@ -33,5 +33,5 @@ function mostrarTelaInicial() {
     }
 }
 
-const telaInicial = "CriarConta"
+const telaInicial = "Login"
 mostrarTelaInicial()
