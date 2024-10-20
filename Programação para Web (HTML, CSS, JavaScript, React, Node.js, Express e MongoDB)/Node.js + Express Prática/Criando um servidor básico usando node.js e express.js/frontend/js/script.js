@@ -6,22 +6,27 @@ function aplicarNaTela(tela, mostrar) {
     }
 }
 
-function aplicarNasTrêsTelas(home, login, conta) {
+function aplicarNasQuatroTelas(home, login, conta, main) {
     aplicarNaTela(document.getElementById("login-body"), login)
     aplicarNaTela(document.getElementById("novaConta"), conta)
     aplicarNaTela(document.getElementById("divHome"), home)
+    aplicarNaTela(document.getElementById("mainpage"), main)
 }
 
 function mostrarApenasHome() {
-    aplicarNasTrêsTelas(true, false, false)
+    aplicarNasQuatroTelas(true, false, false, false)
 }
 
 function mostrarApenasLogin() {
-    aplicarNasTrêsTelas(false, true, false)
+    aplicarNasQuatroTelas(false, true, false, false)
 }
 
 function mostrarApenasConta() {
-    aplicarNasTrêsTelas(false, false, true)
+    aplicarNasQuatroTelas(false, false, true, false)
+}
+
+function mostrarApenasMain() {
+    aplicarNasQuatroTelas(false, false, false, true)
 }
 
 function mostrarTelaInicial() {

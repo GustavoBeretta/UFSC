@@ -1,6 +1,6 @@
 async function fazerLogin() {
-    let campoEmail = document.getElementById("cadastro-email")
-    let campoSenha = document.getElementById("cadastro-senha")
+    let campoEmail = document.getElementById("login-email")
+    let campoSenha = document.getElementById("login-password")
 
     const options = {
         method: 'POST',
@@ -23,6 +23,10 @@ async function fazerLogin() {
 
         const data = await response.json();
         console.log(data.message);
+        const user = data.usuario
+
+        mostrarApenasMain()
+        document.getElementById("nomesobrenome").textContent = `${ user.nome } ${ user.sobrenome }`
 
     } catch (error) {
         console.error('Erro na requisição:', error);

@@ -42,21 +42,17 @@ app.post('/login', (req, res) => {
     let email = req.body.email
     let senha = req.body.senha
 
-    console.log(req.body)
-    console.log(typeof(req.body.email))
-    console.log(typeof(req.body.senha))
-
     for (let i = 0; i < users.length; i++) {
-        if (users[i][email] == email) {
-            if (users[i][senha] == senha) {
-                return res.status(200).json({ loginSucessful: true, message: 'Login realizado com sucesso com sucesso'});
+        if (users[i].email == email) {
+            if (users[i].senha == senha) {
+                return res.status(200).json({ message: 'Login realizado com sucesso com sucesso', usuario: users[i] });
             } else {
-                return res.status(401).json({ loginSucessful: false, message: 'Senha incorreta' });
+                return res.status(401).json({ message: 'Senha incorreta' });
             }
         }
     }
 
-    return res.status(401).json({ loginSucessful: false, message: 'Email não registrado' })
+    return res.status(401).json({ message: 'Email não registrado' })
 })
 
 app.listen(3125, ()=>console.log("Listening on port 3125"))
