@@ -13,7 +13,7 @@ async function fazerLogin() {
     }
 
     try {
-        const response = await fetch('http://127.0.0.1:3125/login', options);
+        const response = await fetch('http://127.0.0.1:3125/api/login', options);
         
         if (!response.ok) {
             const errorData = await response.json();

@@ -185,7 +185,7 @@ async function validaNomeDoUsuario(campoNomeUsuario) {
         body: JSON.stringify({username: campoNomeUsuario.value})
     }
 
-    const result = await fetch("http://127.0.0.1:3125/check-user", options);
+    const result = await fetch("http://127.0.0.1:3125/api/check-user", options);
     const serverResponse = await result.json();
     const statusUsername = document.getElementById("statusUsername");
     if (serverResponse.userExists) {
@@ -267,7 +267,7 @@ async function criarConta() {
     }
 
     try {
-        const response = await fetch('http://127.0.0.1:3125/create-user', options);
+        const response = await fetch('http://127.0.0.1:3125/api/create-user', options);
         
         if (!response.ok) {
             const errorData = await response.json();
