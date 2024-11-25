@@ -83,31 +83,18 @@ app.get('/Cadastro/:cpf', (req, res, next) => {
     });
 });
 
-// Método HTTP GET /Cadastro - retorna todos os cadastros
-app.get('/Cadastro', (req, res, next) => {
-    db.all(`SELECT * FROM cadastro`, [], (err, result) => {
-        if (err) {
-             console.log("Erro: " + err);
-             res.status(500).send('Erro ao obter dados.');
-        } else {
-            res.status(200).json(result);
-        }
-    });
-});
-
-// Método HTTP GET /Cadastro/:cpf - retorna cadastro do cliente com base no CPF
-app.get('/Cadastro/:cpf', (req, res, next) => {
-    db.get( `SELECT * FROM cadastro WHERE cpf = ?`, 
-            req.params.cpf, (err, result) => {
-        if (err) { 
-            console.log("Erro: "+err);
-            res.status(500).send('Erro ao obter dados.');
-        } else if (result == null) {
-            console.log("Cliente não encontrado.");
-            res.status(404).send('Cliente não encontrado.');
-        } else {
-            res.status(200).json(result);
-        }
+// Método HTTP PATCH /Cadastro/:cpf - altera o cadastro de um cliente
+app.patch('/Cadastro/:cpf', (req, res, next) => {
+    db.run(`UPDATE cadastro SET nome = COALESCE(?,nome), email = COALESCE(?,email) WHERE cpf = ?`,
+           [req.body.nome, req.body.email, req.params.cpf], function(err) {
+            if (err){
+                res.status(500).send('Erro ao alterar dados.');
+            } else if (this.changes == 0) {
+                console.log("Cliente não encontrado.");
+                res.status(404).send('Cliente não encontrado.');
+            } else {
+                res.status(200).send('Cliente alterado com sucesso!');
+            }
     });
 });
 
