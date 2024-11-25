@@ -1,0 +1,19 @@
+POST http://localhost:8000/postos HTTP/1.1
+content-type: application/json
+
+{
+    "endereco": "Rua das Laranjeiras, 860"
+}
+
+GET http://localhost:8000/postos
+
+GET http://localhost:8000/postos/1
+
+PATCH http://localhost:8000/postos/1 HTTP/1.1
+content-type: application/json
+
+{
+    "endereco": "Rua das Laranjeiras, 680"
+}
+
+DELETE http://localhost:8000/postos/1

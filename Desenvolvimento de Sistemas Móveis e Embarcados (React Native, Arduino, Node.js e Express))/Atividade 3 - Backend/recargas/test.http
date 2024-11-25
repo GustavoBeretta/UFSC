@@ -1,0 +1,13 @@
+POST http://localhost:8000/recargas HTTP/1.1
+content-type: application/json
+
+{
+    "cpf": "09739379982",
+    "carga": 46
+}
+
+GET http://localhost:8000/recargas
+
+GET http://localhost:8000/usuarios/id/1
+
+GET http://localhost:8000/usuarios/cpf/09739379982

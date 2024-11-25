@@ -1,0 +1,24 @@
+POST http://localhost:8000/usuarios HTTP/1.1
+content-type: application/json
+
+{
+    "cpf": "09739379982",
+    "nome": "Gustavo Beretta Gonçalves",
+    "email": "gustavoberettag@gmail.com",
+    "cartao": "109876543210"
+}
+
+GET http://localhost:8000/usuarios
+
+GET http://localhost:8000/usuarios/09739379982
+
+PATCH http://localhost:8000/usuarios/09739379982 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Gustavo BG",
+    "email": "gustavobgoncalves9@gmail.com",
+    "cartao": "012345678910"
+}
+
+DELETE http://localhost:8000/usuarios/09739379982
