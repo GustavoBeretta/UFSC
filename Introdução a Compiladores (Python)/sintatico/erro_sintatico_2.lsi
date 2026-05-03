@@ -1,0 +1,19 @@
+def calcular(int x) {
+    int y;
+    y = x * 2;
+    return y;
+}
+
+def main() {
+    int valor;
+    int teste;
+    
+    valor = 50;
+    teste = calcular(valor);
+    
+    if (teste > 10 {
+        print teste;
+    } else {
+        print 0;
+    }
+}

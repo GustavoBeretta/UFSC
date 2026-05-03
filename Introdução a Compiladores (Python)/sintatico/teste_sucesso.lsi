@@ -1,0 +1,82 @@
+def calcularArea(int base, int altura) {
+    int area;
+    area = base * altura;
+    return area;
+}
+
+def verificarParidade(int num) {
+    int resto, resultado;
+    int dois;
+    
+    dois = 2;
+    resto = num / dois;
+    resto = resto * dois;
+    
+    if (resto == num) {
+        resultado = 1;
+    } else {
+        resultado = 0;
+    }
+    
+    return resultado;
+}
+
+def processarDados(int dadoA, int dadoB) {
+    int processado;
+    int limite;
+    
+    limite = 50;
+    processado = dadoA + dadoB;
+    
+    if (processado > limite) {
+        processado = processado - 10;
+    } else {
+        processado = processado + 10;
+    }
+    
+    return processado;
+}
+
+def imprimirResultado(int valor) {
+    print valor;
+    return;
+}
+
+def main() {
+    int largura, altura, areaTotal;
+    int numeroTeste, ehPar;
+    int valorX, valorY, valorFinal;
+    int zero;
+    
+    zero = 0;
+    largura = 10;
+    altura = 20;
+    
+    areaTotal = calcularArea(largura, altura);
+    
+    valorX = 0;
+    valorX = imprimirResultado(areaTotal);
+    
+    numeroTeste = 15;
+    ehPar = verificarParidade(numeroTeste);
+    
+    if (ehPar == zero) {
+        print zero;
+    } else {
+        print 1;
+    }
+    
+    valorX = 30;
+    valorY = 25;
+    valorFinal = processarDados(valorX, valorY);
+    
+    valorX = imprimirResultado(valorFinal);
+    
+    if (valorFinal >= 50) {
+        valorFinal = 0;
+    } else {
+        valorFinal = 1;
+    }
+    
+    return;
+}

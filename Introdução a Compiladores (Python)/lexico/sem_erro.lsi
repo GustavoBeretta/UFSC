@@ -1,0 +1,13 @@
+def funcAuxiliar(int ABC, int B) {
+    int C;
+    if (ABC > 20) {C = ABC + B;} else {C = ABC - B;}
+    return C;
+}
+
+def main() {
+    int carro1, carro2;
+    carro1 = 9;
+    carro2 = 6;
+    R = funcAuxiliar(carro1, carro2);
+    print R;
+}
