@@ -1,0 +1,15 @@
+[MASTER]
+
+[MESSAGES CONTROL]
+# C0103: allow short mathematical names (X, W, b, z, lr, N)
+# C0413: sys.path bootstrap in test files must precede project imports
+disable=C0103,C0413
+
+[FORMAT]
+max-line-length=100
+
+[DESIGN]
+max-args=8
+max-attributes=12
+max-locals=25
+max-positional-arguments=8
